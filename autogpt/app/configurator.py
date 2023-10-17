@@ -177,6 +177,14 @@ def check_model(
 
     if any(model_name in m["id"] for m in models):
         return model_name
+    
+    #check if model is gpt4all
+    # GPT4ALL modification
+    if "gpt4all" in model_name:
+        return model_name
+
+    if "ggml" in model_name:
+        return model_name
 
     logger.typewriter_log(
         "WARNING: ",

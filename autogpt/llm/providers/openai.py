@@ -71,6 +71,21 @@ OPEN_AI_CHAT_MODELS = {
             max_tokens=32768,
             supports_functions=True,
         ),
+        # GPT4ALL modification
+        ChatModelInfo(
+            name="ggml-model-gpt4all-falcon-q4_0.bin",
+            prompt_token_cost=0.06,
+            completion_token_cost=0.12,
+            max_tokens=32768,
+            supports_functions=True,
+        ),
+        ChatModelInfo(
+            name="nous-hermes-13b.ggmlv3.q4_0.bin",
+            prompt_token_cost=0.06,
+            completion_token_cost=0.12,
+            max_tokens=32768,
+            supports_functions=True,
+        ),
     ]
 }
 # Set aliases for rolling model IDs

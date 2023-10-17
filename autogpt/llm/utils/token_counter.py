@@ -47,6 +47,15 @@ def count_message_tokens(
         tokens_per_message = 3
         tokens_per_name = 1
         encoding_model = "gpt-4"
+    #GPT4ALL modification
+    elif "gpt4all" in model:
+        tokens_per_message = 3
+        tokens_per_name = 1
+        encoding_model = "gpt-4"
+    elif "ggml" in model:
+        tokens_per_message = 3
+        tokens_per_name = 1
+        encoding_model = "gpt-4"
     else:
         raise NotImplementedError(
             f"count_message_tokens() is not implemented for model {model}.\n"

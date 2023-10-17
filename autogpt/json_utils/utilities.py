@@ -19,6 +19,7 @@ def extract_dict_from_response(response_content: str) -> dict[str, Any]:
         response_content = "```".join(response_content.split("```")[1:-1])
 
     # response content comes from OpenAI as a Python `str(content_dict)`, literal_eval reverses this
+    print("response_content: ",response_content)
     try:
         return ast.literal_eval(response_content)
     except BaseException as e:
